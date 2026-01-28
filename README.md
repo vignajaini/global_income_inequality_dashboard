@@ -1,66 +1,75 @@
-# Global Income Inequality Dashboard
+# 🌍 Global Income Inequality Dashboard
 
-A comprehensive web application for visualizing and analyzing global income inequality trends, country profiles, and policy impacts. Built with React, TypeScript, and modern web technologies.
+A comprehensive web application for visualizing and analyzing global income inequality trends, country profiles, and policy impacts. Built with **React**, **TypeScript**, and modern web technologies.
 
-## Overview
+---
+
+## 📌 Overview
 
 This dashboard provides interactive tools and visualizations to explore:
-- **Global Income Inequality Metrics** - Real-time data visualization of income distribution worldwide
-- **Country Profiles** - Detailed analysis of individual countries including trends and policy insights
-- **Country Comparisons** - Compare economic indicators across multiple countries
-- **Data Explorer** - Interactive heatmaps, correlations, and trend analysis
-- **Research Resources** - Access publications, datasets, and case studies
-- **Policy Impact Simulator** - Analyze potential effects of policy interventions
 
-## Features
+- **Global Income Inequality Metrics** – Real-time income distribution insights  
+- **Country Profiles** – Detailed country-level trends and policy insights  
+- **Country Comparisons** – Cross-country economic indicator comparison  
+- **Data Explorer** – Heatmaps, correlations, and trend analysis  
+- **Research Resources** – Publications, datasets, and case studies  
+- **Policy Impact Simulator** – Analyze effects of policy interventions  
 
-✨ **Key Features:**
-- 📊 Interactive dashboards with multiple visualization options
-- 🌍 Global heatmaps and regional comparisons
-- 📈 Time-series trend analysis
-- 🔍 Advanced data filtering and correlation analysis
-- 🎯 Policy impact simulation tools
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- 🌙 Dark/Light theme support
-- 🔐 User authentication and protected routes
-- 💬 Real-time chatbot for queries
-- 📄 PDF export functionality
+---
 
-## Tech Stack
+## ✨ Features
 
-This project is built with:
+- 📊 Interactive dashboards with multiple visualization options  
+- 🌍 Global heatmaps and regional comparisons  
+- 📈 Time-series trend analysis  
+- 🔍 Advanced filtering and correlation analysis  
+- 🎯 Policy impact simulation tools  
+- 📱 Fully responsive (mobile, tablet, desktop)  
+- 🌙 Dark / Light theme support  
+- 🔐 User authentication & protected routes  
+- 💬 Real-time chatbot for user queries  
+- 📄 PDF export functionality  
 
-- **Frontend Framework:** React 18+ with TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **UI Components:** shadcn-ui
-- **Routing:** React Router
-- **State Management:** React Context API
-- **Charts & Visualization:** Chart.js, Recharts
-- **Authentication:** Custom JWT-based auth
-- **Package Manager:** npm / bun
+---
 
-## Project Structure
+## 🛠 Tech Stack
+
+- **Frontend:** React 18 + TypeScript  
+- **Build Tool:** Vite  
+- **Styling:** Tailwind CSS  
+- **UI Library:** shadcn-ui  
+- **Routing:** React Router  
+- **State Management:** React Context API  
+- **Charts:** Chart.js, Recharts  
+- **Authentication:** Custom JWT-based auth  
+- **Package Manager:** npm / bun  
+
+---
+
+## 📂 Project Structure
+
+```text
 src/
-├── components/ # Reusable UI components
-│ ├── ui/ # shadcn-ui components
-│ ├── Navbar.tsx
-│ ├── ThemeToggle.tsx
-│ └── ...
-├── pages/ # Page components
-│ ├── Dashboard*.tsx # Various dashboard views
-│ ├── Country_profile/
-│ ├── Compare_countries/
-│ ├── Data_explorer/
-│ ├── Insights/
-│ └── Research/
-├── lib/ # Utility functions
-│ ├── auth.ts # Authentication logic
-│ └── utils.ts
-├── hooks/ # Custom React hooks
-├── utils/ # Helper utilities
+├── components/           # Reusable UI components
+│   ├── ui/               # shadcn-ui components
+│   ├── Navbar.tsx
+│   ├── ThemeToggle.tsx
+│   └── ...
+├── pages/                # Page-level components
+│   ├── Dashboard*.tsx
+│   ├── Country_profile/
+│   ├── Compare_countries/
+│   ├── Data_explorer/
+│   ├── Insights/
+│   └── Research/
+├── lib/                  # Core utilities
+│   ├── auth.ts           # Authentication logic
+│   └── utils.ts
+├── hooks/                # Custom React hooks
+├── utils/                # Helper utilities
 ├── App.tsx
 └── main.tsx
+
 
 Install dependencies
 Run development server

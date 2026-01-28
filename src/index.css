@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------------
+   DESIGN SYSTEM — COLOR TOKENS (HSL)
+----------------------------------------------------------- */
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 200 80% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 65% 75%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 180 70% 70%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 200 80% 65%;
+
+    --radius: 0.75rem;
+  }
+
+  /* Dark mode color base */
+  .dark {
+    --background: 0 0% 0%; /* black */
+    --foreground: 210 40% 98%; /* light text */
+  }
+}
+
+/* ----------------------------------------------------------
+   UTILITIES — Glassmorphism, Shadows
+----------------------------------------------------------- */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .card-shadow {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ----------------------------------------------------------
+   GLOBAL BACKGROUND — FIXED FULL-PAGE NEON GRADIENT
+----------------------------------------------------------- */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+  }
+
+  /* ⭐ Full-width neon gradient (Fix for black area on right) */
+  .dark body {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(160, 50, 255, 0.35), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(40, 150, 255, 0.35), transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(0, 255, 180, 0.25), transparent 70%),
+      #000000;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #e5e7eb !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   REMOVE OLD BACKGROUNDS FROM ALL PAGES
+----------------------------------------------------------- */
+.app-background,
+.gradient-bg {
+  background: transparent !important;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR — ANIMATED HOVER UNDERLINE
+----------------------------------------------------------- */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  color: inherit;
+}
+
+.nav-link:hover {
+  color: #c084fc;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #a855f7, #3b82f6);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
